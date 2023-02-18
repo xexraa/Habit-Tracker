@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block main_content %}   
+    <section class="delete-habit">
+        <form action="{{ url_for('.delete_habit') }}" method="POST">
+        {% for habit in habits %}
+            <div class="habit-row">
+                <div class="habit completed habit-column">
+                    <p class="habit__name">
+                        {{ habit["name"] }}
+                    </p>
+                    <div class="checkbox">
+                        <input type="checkbox" name="selected_habits" value="{{ habit['_id'] }}" class="checkbox__delete">                   
+                    </div>
+                </div>
+            </div>
+        {% endfor %} 
+        <div class="del-button">
+            <button type="submit" class="button button__delete"><img src="/static/svg/trash-1-svgrepo-com.svg" alt="SVG file" class="circle-icon"></button>  
+        </div>
+        </form>  
+    </section>
+{% endblock %}
