@@ -1,5 +1,7 @@
 # Habit Tracker
 
+![habits tracker](https://user-images.githubusercontent.com/121942715/219853323-160a53b7-19f2-4820-b6f5-3afabcdb9a98.png)
+
 ## Web project.
 
 The main premise of this application is to track your habits
